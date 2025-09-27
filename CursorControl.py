@@ -2,7 +2,7 @@ import pyautogui
 import os
 import time
 
-time.sleep(3)
+time.sleep(5)
 
 maps_folder = "maps"
 
