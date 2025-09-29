@@ -11,6 +11,9 @@ for filename in os.listdir(maps_folder):
         map_path = os.path.join(maps_folder, filename)
         print(f"Searching for {filename}...")
 
+        pyautogui.scroll(-500)
+
+
         location = pyautogui.locateOnScreen(map_path, confidence=0.8)
 
         if location:
