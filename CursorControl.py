@@ -4,7 +4,6 @@ import pyautogui
 import os
 import time
 
-# import your patterns
 from patterns import testpattern
 
 # ---- CONFIG ----
@@ -15,7 +14,7 @@ SEARCH_INTERVAL = 0.25
 # ----------------
 
 pyautogui.PAUSE = 0.05
-pyautogui.FAILSAFE = False   # UI will handle abort later
+pyautogui.FAILSAFE = False
 
 # preload templates
 templates = {}
@@ -51,7 +50,6 @@ def find_template_on_image(template_gray, screen_gray):
 ACTION_MAP = {
     'attack.png': testpattern.spam_keys,
     'heal.png': testpattern.simple_click,
-    # add more: 'image.png': pattern_function
 }
 
 def scan_and_act():
