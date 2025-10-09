@@ -12,7 +12,10 @@ def spam_keys(center):
     x, y = center
     pyautogui.moveTo(x, y, duration=0.2)
     pyautogui.click()
-    time.sleep(0.1)
     for key in ['a', 's', 'd']:
+        # Safety: abort if user moves mouse
+        if pyautogui.position() != (x, y):
+            print("⛔ Aborted by user movement.")
+            return
         pyautogui.press(key)
         time.sleep(0.05)
